@@ -1,0 +1,90 @@
+/*! Utilities and helper classes. Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css */
+
+/*
+ * HTML5 Boilerplate utilities
+ * Primary focus is on visibility of items for various user types and AT
+ */
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  // Allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+  &.focusable:active,
+  &.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+// Hide visually and from screenreaders, but maintain layout
+
+.invisible {
+  visibility: hidden;
+}
+
+// Only display content to screen readers. Source: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/*
+ * GP Utilities and helpers
+ */
+
+// Using Bourbon mixin which uses http://nicolasgallagher.com/micro-clearfix-hack/. Supports all modern browsers and as far down as IE6
+.clearfix {
+  @include clearfix;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.center-block {
+  @include center-block;
+}
+
+// Typography alignment helpers BS3
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

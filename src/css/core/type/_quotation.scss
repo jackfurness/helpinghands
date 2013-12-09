@@ -1,0 +1,17 @@
+// Block quote: Attempting to cover blockquote patterns defined by ALA https://gist.github.com/murtaugh/4489740 using TypePlate solution
+
+%cite {
+  @include cite-style($cite-display, $cite-text-align, $cite-font-size);
+}
+
+blockquote {
+  @include blockquote("-");
+}
+
+// Pull quote: TypePlates improvements over http://24ways.org/2005/swooshy-curly-quotes-without-images
+// Requires wrapping element, ideally <aside> in the following format:
+// <aside class="pull-quote"><blockquote><p></p></blockquote></aside>
+
+.pull-quote {
+  @include pull-quotes;
+}

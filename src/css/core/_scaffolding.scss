@@ -1,0 +1,45 @@
+/*
+ * Idea based on Bootstrap 3: https://github.com/twbs/bootstrap/blob/master/less/scaffolding.less
+ * This partial contains more opinionated resets such as box-sizing and font behaviour
+ */
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html {
+  -webkit-tab-highlight-color: rgba(0,0,0,0);
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+
+// Images
+img {
+  vertical-align: middle;
+}

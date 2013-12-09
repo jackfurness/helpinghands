@@ -1,0 +1,65 @@
+html {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $type-body-color;
+}
+
+%heading {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin-top: 0;
+  text-rendering: optimizeLegibility;
+  color: $type-heading-color;
+}
+
+p {
+  margin: 0 0 $line-height-computed;
+}
+
+a {
+  color: $link-color;
+  &:hover, &:focus {
+    color: $link-hover-color;
+  }
+  &:focus {
+    outline: thin dotted #333;
+    outline-offset: -2px;
+  }
+}
+
+/* Headings */
+
+h1, .alpha {
+  @include heading($font-size-alpha);
+}
+
+h2, .beta {
+  @include heading($font-size-beta);
+}
+
+h3, .gamma {
+  @include heading($font-size-gamma);
+}
+
+h4, .delta {
+  @include heading($font-size-delta);
+}
+
+h5, .epsilon {
+  @include heading($font-size-epsilon);
+}
+
+h6, .zeta {
+  @include heading($font-size-zeta);
+}
+
+small {
+  font-size: $font-size-small;
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #999;
+}

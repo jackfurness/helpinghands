@@ -1,0 +1,35 @@
+// Returns unitless value
+@function strip-units($val) {
+  @return ($val/($val*0+1));
+}
+
+// Converts given pixel value to rem unit. If $base is not specified, function is dependant upon type partial
+@function rem($px, $base: $font-size-base) {
+  @if not unitless($px) {
+    $px: strip-units($px);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($px/$base)*1rem;
+}
+
+// Returns contrast color, i.e. if backgroung lightness is below threshold a light text color will be returned. Based on Compass function
+@function contrasted($color, $light-color: #fff, $dark-color: #4a4a4a, $threshold: 50%) {
+  @if (lightness($color) > $threshold) {
+    @return $dark-color;
+  } @else {
+    @return $light-color;
+  }
+}
+
+// Typeplate: divide 1 unit of measure by given font-size & return a relative em value
+// Scale = Font size,
+@function measure-margin($scale, $measure: $font-size-base * $line-height-base, $value: "em") {
+  @return ($measure/$scale)#{$value};
+}
+
+// Typeplate: divide a given font-size by base font-size & return a relative value
+@function context-calc($scale, $base, $value) {
+  @return ($scale/$base)#{$value};
+}
