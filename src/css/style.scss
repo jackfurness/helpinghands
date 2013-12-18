@@ -24,5 +24,97 @@
 // Grid
 @import "module/responsive-grid";
 
+$brand-color-1: #d11250;
 
+$brand-color-off-black: #1d2224;
+$color-grey-background: #f0f0f0;
+
+
+.header-title {
+	border-top: 5px solid $brand-color-1;
+	background: $brand-color-off-black;
+	.logo {
+	}
+	h1 {
+		@include heading($font-size-delta);
+		color: #fff;
+		margin: 1.5em 0 1.5em 0;
+		margin: 1.5rem 0 1.5rem 0;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}
+
+//Navigation
+
+nav {
+	background: $color-grey-background;
+}
+.header-nav {
+	margin: 0;
+	padding: 1em 0 1em 0;
+	padding: 1rem 0 1rem 0;
+	list-style-type: none;
+	font-size: $font-size-small;
+	li {
+		margin: 0 1.5em 0 0;
+		margin: 0 1.5rem 0 0;
+		text-transform: uppercase;
+		font-weight: bold;
+		display: inline-block;
+		a {
+			color: $brand-color-off-black;
+			@include transition (color 0.3s linear);
+			&:hover,
+			&:active {
+				color: $link-hover-color;
+				text-decoration: none;
+			}
+		}
+		
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.selected {
+		background: #769F00;
+		padding: 0.5em 1em 0.5em 1em;
+		padding: 0.5rem 1rem 0.5rem 1rem;
+		color: #fff;
+		position: relative;
+		&:after {
+			width: 0;
+			height: 0;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-top: 8px solid #769F00;
+			position: absolute;
+			bottom: -8px;
+			margin-left: -8px;
+			left: 50%;
+			padding: 0;
+			content: "";
+		}
+	}
+}
+
+//Banner
+
+.banner {
+	background: $color-grey-background;
+}
+
+.banner-homepage-heading {
+	color: darken($color-grey-background, 20%);
+	text-transform: uppercase;
+	text-align: center;
+	margin: 1.5em 0 1.5em 0;
+	margin: 1.5rem 0 1.5rem 0;
+}
+
+//Misc
+
+.normal-weight {
+	font-weight: normal;
+}
 

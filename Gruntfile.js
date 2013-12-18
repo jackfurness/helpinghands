@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>',
                     style: 'expanded',
                     noCache: true,
-                    sourcemap: true
+                    sourcemap: false
                 },
                 files: [{
                     expand: true,
