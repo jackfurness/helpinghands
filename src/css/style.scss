@@ -24,6 +24,9 @@
 // Grid
 @import "module/responsive-grid";
 
+// Slider
+//@import "module/js-slider";
+
 @font-face {
 	font-family: 'helping-hands';
 	src: url('fonts/helping-hands.eot');
@@ -235,4 +238,152 @@ nav {
 .normal-weight {
 	font-weight: normal;
 }
+
+
+//slider shit
+
+#banner-slider
+{
+    width: 100%;
+    margin:0 auto 24px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* slide */
+#banner-slider li > div, #banner-slider li > a
+{
+    max-width: 1140px;
+    margin:0 auto; /* center each slide */
+    position: relative;
+    display:block;
+}
+
+/* loading image indicator */    
+#banner-slider div.preload 
+{
+    background: black url(img/loading.gif) no-repeat center center;
+}
+
+/*----- video -----*/
+#banner-slider a.video 
+{
+	position:absolute;
+    border:0;top:0;left:0;
+	width:100%;height:100%;
+	background:transparent url(img/video.png) no-repeat 50% 50%;
+}
+  
+/*------ pager ------*/      
+/* The pager id should be: slider id + "-pager" */    
+#banner-slider-pager
+{
+    padding-bottom: 24px;
+    margin: 0 auto; 
+    text-align: center;
+    display: table;
+    font-size: 0;
+}
+         
+#banner-slider-pager a 
+{
+    display:inline-block;
+    width: 15px;
+    height: 15px;
+    background: #d1d1d1;
+    font-size:0;
+    margin: 2px 6px;
+    cursor:pointer;
+    border-radius:20px;
+}
+#banner-slider-pager a:hover 
+{
+    opacity: 0.6;
+}
+#banner-slider-pager a.active 
+{
+    background-color: $brand-color-3;
+}
+ 
+/* --------- navigation controls ------- */   
+/* The nav id should be: slider id + ("-prev", "-next", and "-pause-play") */    
+#banner-slider-prev, #banner-slider-next
+{
+    position: absolute;
+    top: 40%;
+    width:64px;
+    height:64px;
+    display:inline-block;
+    margin:0;
+    background-image: url(img/navs.png);
+}
+#banner-slider-prev {
+    left: 0;
+    background-position:0 0;
+}
+#banner-slider-prev:hover {background-position:0 -64px;}
+
+#banner-slider-next {
+    right: 0;
+    background-position:-64px 0;
+}
+#banner-slider-next:hover {background-position:-64px -64px;}
+
+#banner-slider-pause-play { display:none;}
+
+
+
+/*------- Settings that usually don't need to change ------- */
+#banner-slider > ul
+{
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#banner-slider-pager, #banner-slider-prev, #banner-slider-next, #banner-slider-pause-play
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#banner-slider
+{
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+}
+#banner-slider > ul
+{
+    overflow: hidden;
+    position: relative;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+#banner-slider > ul > li
+{
+    float: left;
+    width: 100%;
+    position: relative;
+    list-style:none;
+    padding:0;
+    margin:0;
+
+}
+
+.slider-caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: $brand-color-2;
+	font-family: $font-family-sans-serif;
+	padding: 10px;
+	color: #fff;
+}
+
 

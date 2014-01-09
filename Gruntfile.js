@@ -70,9 +70,7 @@ module.exports = function(grunt) {
             },*/
             dev: {
                 files: {
-                    'dist/js/<%= pkg.name %>.min.js': ['src/js/<%= pkg.name %>.js'],
-                    'dist/js/jquery.min.js': ['src/bower_components/jquery/jquery.js'],
-                    'dist/js/modernizr.min.js': ['src/bower_components/modernizr/modernizr.js']
+                    'dist/js/<%= pkg.name %>.min.js': ['src/js/<%= pkg.name %>.js']
                 }
             }
         },

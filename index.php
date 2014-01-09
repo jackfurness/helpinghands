@@ -15,6 +15,40 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<h2 class="banner-homepage-heading">Empowerment through education</h2>
+				 <div id="banner-slider">
+			        <ul>
+			            <li>
+			            	<div data-image="dist/img/slides/slide-1.jpg">
+			            		<div class="slider-caption">Empowering local people through education</div>
+			            	</div>
+			            </li>
+			            <li>
+			            	<div data-image="dist/img/slides/slide-2.jpg">
+			            		<div class="slider-caption">Training local church leaders and young adults; equipping them to get new skills and qualifications</div>
+			            	</div>
+			            </li>
+			            <li>
+			            	<div data-image="dist/img/slides/slide-3.jpg">
+			            		<div class="slider-caption">Providing education for pre-school and primary aged children</div>
+			            	</div>
+			            </li>
+			            <li>
+			            	<div data-image="dist/img/slides/slide-4.jpg">
+			            		<div class="slider-caption">Investing in on-going professional development programmes for our teachers</div>
+			            	</div>
+			            </li>
+			            <li>
+			            	<div data-image="dist/img/slides/slide-5.jpg">
+			            		<div class="slider-caption">Modelling the integration of disabled and able bodied children; raising community awareness and working together to break down stereotypes and prejudices</div>
+			            	</div>
+			            </li>
+			            <li>
+			            	<div data-image="dist/img/slides/slide-6.jpg">
+			            		<div class="slider-caption">Preparation for life through vocational and skills training</div>
+			            	</div>
+			            </li>
+			        </ul>
+			    </div>
 			</div>
 		</div>
 	</div>

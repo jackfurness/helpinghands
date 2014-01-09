@@ -53,8 +53,8 @@ $font-weight: normal !default;
 $line-height-base: 1.428571429 !default;
 $line-height-computed: floor($font-size-base * $line-height-base);
 
-$heading-font-family: $font-family-sans-serif;
-$heading-font-weight: bold !default;
+$heading-font-family: "novecentosans-wide-demi-bold";
+$heading-font-weight: normal !default;
 $heading-line-height: 1.1 !default;
 $heading-color: inherit;
 

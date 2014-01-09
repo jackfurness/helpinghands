@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="dist/css/style.css">
+        <script type="text/javascript" src="dist/js/helpinghands.min.js"></script>
     </head>
 	<body>
 		<header>
@@ -21,7 +22,7 @@
 							<span class="logo">&nbsp;</span>
 						</div>
 						<div class="col-xs-12 col-sm-10">
-							<h1>Helping Hands <span class="normal-weight">Organisation of Kenya</span></h1>
+							<h1>Helping Hands Organisation of Kenya</h1>
 						</div>
 					</div>
 				</div>
