@@ -9,7 +9,7 @@
         <title><?php perch_layout_var('title'); ?> | Helping Hands Organisation of Kenya, Naivasha</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="dist/css/style.css">
         <script type="text/javascript" src="dist/js/helpinghands.min.js"></script>
     </head>

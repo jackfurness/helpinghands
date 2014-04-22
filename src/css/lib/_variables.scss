@@ -1,3 +1,9 @@
+// *** Branding **
+
+$brand-color-1: #d11250;
+$brand-color-2: #769F00;
+$brand-color-3: #FBB036;
+
 // *** Links ***
 
 $link-color: #d11250!default;
@@ -41,10 +47,10 @@ $container-lg: $container-large-desktop !default;
 $type-body-color: #444 !default;
 $type-heading-color: #222 !default;
 
-$font-family-sans-serif:  Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$font-family-sans-serif:  'Lato', Arial, "Helvetica Neue", Helvetica, sans-serif !default;
 $font-family-serif: Palatino, “Palatino Linotype”, Georgia, Times, “Times New Roman”, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base: $font-family-serif;
+$font-family-base: $font-family-sans-serif;
 
 $font-size-base: 16px !default;
 $font-size-small: 80% !default;
@@ -53,8 +59,8 @@ $font-weight: normal !default;
 $line-height-base: 1.428571429 !default;
 $line-height-computed: floor($font-size-base * $line-height-base);
 
-$heading-font-family: "novecentosans-wide-demi-bold";
-$heading-font-weight: normal !default;
+$heading-font-family: $font-family-sans-serif;
+$heading-font-weight: bold !default;
 $heading-line-height: 1.1 !default;
 $heading-color: inherit;
 
@@ -84,3 +90,23 @@ $pull-quote-color: inherit !default;
 
 $list-spacer: $line-height-computed;
 
+// Buttons
+
+$btn-font-weight: bold !default;
+$btn-padding: 16px !default;
+
+
+$btn-default-color: #fff !default;
+$btn-default-bg: $brand-color-3 !default;
+$btn-default-border: darken($btn-default-bg, 10%) !default;
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: #ccc !default;
+$btn-primary-border: darken($btn-primary-bg, 5%) !default;
+
+$btn-link-disabled-color:     		#ccc !default;
+
+// Misc
+
+$border-radius-base: 2px;
+$html-background: #fafafa;

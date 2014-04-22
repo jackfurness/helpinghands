@@ -3,7 +3,7 @@
     define('PERCH_LICENSE_KEY', 'P21209-GPF214-VRR268-BRJ184-DFM015');
 
     define("PERCH_DB_USERNAME", 'root');
-    define("PERCH_DB_PASSWORD", 'qazwsx89');
+    define("PERCH_DB_PASSWORD", 'qetsfzc89');
     define("PERCH_DB_SERVER", "localhost");
     define("PERCH_DB_DATABASE", "helpinghands");
     define("PERCH_DB_PREFIX", "perch2_");

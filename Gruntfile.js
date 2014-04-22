@@ -87,5 +87,5 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('build', 'Basic build task for development environment', ['clean:dev', 'sass:dev', 'uglify:dev', 'imagemin:dev', 'copy']);
-    grunt.registerTask('local', 'Basic build task for local environment', ['clean:dev', 'sass:local', 'uglify:dev', 'imagemin:dev', 'copy:fonts', 'copy:gif']);
+    grunt.registerTask('local', 'Basic build task for local environment', ['clean:dev', 'sass:dev', 'uglify:dev', 'imagemin:dev', 'copy:fonts', 'copy:gif']);
 }
