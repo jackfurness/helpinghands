@@ -1,0 +1,27 @@
+<div class="blog-con">
+    <div class="row">
+        <div class="col-sm-2">
+            <span class="blog-date">
+                <span><perch:blog id="postDateTime" format="d" /></span>
+                <span class="blog-date-month"><perch:blog id="postDateTime" format="M" /></span>
+                <!--<perch:if exists="authorGivenName">by <perch:blog id="authorGivenName" /> <perch:blog id="authorFamilyName" /></perch:if>-->
+            </span>
+        </div>
+        <div class="col-sm-10">
+            <h1 class="beta"><perch:blog id="postTitle" type="text" required="true" size="xl" /><span class="blog-author">by <perch:blog id="authorGivenName"/>&nbsp;<perch:blog id="authorFamilyName"/></span></h1>
+            <perch:if exists="image">
+                <div>
+                    <img class="img-responsive" src="<perch:blog id="image" type="image" crop="true" label="Image" />" alt="<perch:blog id="postTitle" />" />
+                </div>
+            </perch:if>
+            <div class="description entry-content">
+                <perch:blog id="postDescHTML" type="textarea" encode="false" editor="markitup" textile="true" size="xxl" required="true" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<perch:blog id="excerpt" type="textarea" label="Excerpt" textile="true" order="1" suppress="true" size="s" />
+<perch:blog id="image" type="image" width="50" height="50" crop="true" suppress="true" />
+
+

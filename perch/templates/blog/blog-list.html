@@ -1,0 +1,34 @@
+<div class="blog-con">
+    <div class="row">
+        <div class="col-sm-2">
+            <span class="blog-date">
+                <span><perch:blog id="postDateTime" format="d" /></span>
+                <span class="blog-date-month"><perch:blog id="postDateTime" format="M" /></span>
+            </span>
+        </div>
+        <div class="col-sm-10">
+            <h4 class="recent-blog-heading">
+                <a href="<perch:blog id="postURL" />" rel="bookmark"><perch:blog id="postTitle" type="text"/></a>
+            </h4>
+            <perch:if exists="image">
+                <div>
+                    <img class="img-responsive" src="<perch:blog id="image" type="image" crop="true" label="Image" />" alt="<perch:blog id="postTitle" />" />
+                </div>
+            </perch:if>
+            <perch:blog id="postDescHTML" type="textarea" textile="true" chars="300" append="..."/>
+        </div>
+    </div>
+</div>
+<perch:after>
+    <perch:if exists="paging">
+        <div class="paging">
+            Page <perch:blog id="current_page" /> of <perch:blog id="number_of_pages" />
+            <perch:if exists="not_first_page">
+                <a href="<perch:blog id="prev_url" encode="false" />">Previous</a>
+            </perch:if>
+            <perch:if exists="not_last_page">
+                <a href="<perch:blog id="next_url" encode="false" />">Next</a>
+            </perch:if>
+        </div>
+    </perch:if>
+</perch:after>

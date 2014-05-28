@@ -1,7 +1,16 @@
 <div class="blog-con">
-	<span class="blog-date"><perch:blog id="postDateTime" format="%d %B %Y" /></span>
-	<h4 class="recent-blog-heading">
-		<a href="<perch:blog id="postURL" />" rel="bookmark"><perch:blog id="postTitle" type="text"/></a>
-	</h4>
-	<perch:blog id="postDescHTML" type="textarea" textile="true" chars="300" append="..."/>
+	<div class="row">
+		<div class="col-sm-2">
+			<span class="blog-date">
+				<span><perch:blog id="postDateTime" format="d" /></span>
+				<span class="blog-date-month"><perch:blog id="postDateTime" format="M" /></span>
+			</span>
+		</div>
+		<div class="col-sm-10">
+			<h4 class="recent-blog-heading">
+				<a href="<perch:blog id="postURL" />" rel="bookmark"><perch:blog id="postTitle" type="text"/></a>
+			</h4>
+			<perch:blog id="postDescHTML" type="textarea" textile="true" chars="300" append="..."/>
+		</div>
+	</div>
 </div>

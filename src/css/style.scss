@@ -69,6 +69,15 @@
 $brand-color-off-black: #1d2224;
 $color-grey-background: #f0f0f0;
 
+@mixin section-break() {
+	padding: 3em 0;
+	padding: 3rem 0;
+}
+
+header {
+	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
+}
 
 .header-title {
 	border-top: 5px solid $brand-color-1;
@@ -142,15 +151,14 @@ $color-grey-background: #f0f0f0;
 	color: darken($color-grey-background, 20%);
 	text-transform: uppercase;
 	text-align: center;
-	margin: 1.5em 0;
-	margin: 1.5rem 0;
+	margin: 0 0 1.5em 0;
+	margin: 0 0 1.5rem 0;
 }
 
 //Recent blogs
 
 .recent-blogs {
-	padding-bottom: 2em;
-	padding-bottom: 2rem;
+	@include section-break();
 }
 
 .recent-blog-heading {
@@ -163,26 +171,42 @@ $color-grey-background: #f0f0f0;
 	padding: 2rem;
 	background: #fff;
 	border-bottom: 2em solid $html-background;
+	img {
+		margin-bottom: 20px;
+	}
 }
 
 .blog-date {
 	font-family: $font-family-sans-serif;
 	text-transform: uppercase;
-	font-size: $font-size-small;
+	font-size: $font-size-gamma;
 	display: block;
 	margin-bottom: 0.5em;
 	margin-bottom: 0.5rem;
+	color: $brand-color-2;
+	text-align: center;
+	border-right: 1px dashed darken($html-background, 5%);
+	.blog-date-month {
+		font-weight: bold;
+		color: $brand-color-2;
+		display: block;
+		font-size: $font-size-epsilon;
+	}
+}
+
+.blog-author {
+	font-size: $font-size-epsilon;
+	display: block;
 }
 
 
 //Get invovled
 
 .get-involved {
-	padding: 2em 0;
-	padding: 2rem 0;
+	@include section-break();
 	background: #fff;
 	position: relative;
-	z-index: -3;
+	z-index: 0;
 	h4 {
 		text-transform: uppercase;
 	}
@@ -226,9 +250,53 @@ $color-grey-background: #f0f0f0;
 .normal-weight {
 	font-weight: normal;
 }
+.map-pin {
+	position: absolute;
+	left: 125px;
+	top: 100px;
+	background: $brand-color-2;
+	border-radius: 2px;
+	.map-pin-text {
+		position: relative;
+		padding: 5px 8px;
+		display: block;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 14px;
+		&:after {
+			width: 0;
+			height: 0;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-top: 8px solid $brand-color-2;
+			position: absolute;
+			bottom: -8px;
+			margin-left: -8px;
+			left: 50%;
+			padding: 0;
+			content: "";
+		}
+	}
+}
+// donate shiz
+.donate {
+	@include section-break();
+}
 
-
-// riibon
+.donate-bucket {
+	background: #fff;
+	border: none;
+	border-bottom: 1px dashed rgba(0,0,0,0.1);
+	padding: 20px;
+	margin-bottom: 20px;
+	.donate-amount {
+		border-radius: 50%;
+		font-size: $font-size-beta;
+		display: block;
+		margin-bottom: 5px; 
+	}
+}
+// ribbon
 
 
 .ribbon {

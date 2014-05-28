@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="dist/css/style.css">
+        <link rel="stylesheet" href="/helpinghands/dist/css/style.css">
         <script type="text/javascript" src="dist/js/helpinghands.min.js"></script>
     </head>
 	<body>
@@ -38,7 +38,7 @@
 								  }
 								 else 
 								 {
-									echo '<li><a href="/">Homepage</a></li>';
+									echo '<li><a href="index.php">Homepage</a></li>';
 								 }
 								 ?>
 
@@ -48,7 +48,7 @@
 								  }
 								 else 
 								 {
-									echo '<li><a href="who_we_are">Who we are</a></li>';
+									echo '<li><a href="who_we_are.php">Who we are</a></li>';
 								 }
 								 ?>
 
@@ -58,7 +58,7 @@
 								  }
 								 else 
 								 {
-									echo '<li><a href="what_we_do">What we do</a></li>';
+									echo '<li><a href="what_we_do.php">What we do</a></li>';
 								 }?>
 
 								<?php if ($title = perch_layout_var('title', true)=="Get involved")
@@ -67,15 +67,15 @@
 								  }
 								 else 
 								 {
-									echo '<li><a href="get_involved">Get involved</a></li>';
+									echo '<li><a href="get_involved.php">Get involved</a></li>';
 								 }?>
-								<?php if ($title = perch_layout_var('title', true)=="Blog list")
+								<?php if ($title = perch_layout_var('title', true)=="Blog")
 								  {
 								  	echo '<li class="selected"><span>Blog</span><span class="nav-arrow-down">&nbsp;</span></li>';
 								  }
 								 else 
 								 {
-									echo '<li><a href="blog">Blog</a></li>';
+									echo '<li><a href="blog.php">Blog</a></li>';
 								 }?>
 								<?php if ($title = perch_layout_var('title', true)=="Donation")
 								  {
@@ -83,7 +83,7 @@
 								  }
 								 else 
 								 {
-									echo '<li><a href="donate">Donate</a></li>';
+									echo '<li><a href="donate.php">Donate</a></li>';
 								 }?>
 								 <li><a href="#contactUs">Contact us</a></li>
 				       		</ul>
